@@ -1,0 +1,21 @@
+/* RECAPTCHA styling */
+div#recaptcha_image img
+{
+	height: 46px;
+	/*width: 350px;*/
+}
+
+div#recaptcha_image 
+{
+	font-size: .5em;
+}
+
+div#recaptcha_controls
+{
+	text-align: center;
+	
+}
+div#recaptcha_controls div
+{
+	padding-right: 25px;
+}

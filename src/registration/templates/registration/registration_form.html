@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<h1>Register an account</h1>
+
+<p>Fill out this form and hit submit to create an account for this website. 
+You will need to confirm your registration through e-mail so be sure to use a valid e-mail address.</p>
+
+<form style="margin-left:auto;margin-right:auto;" method="POST"> {% csrf_token %}
+	<table>
+	{{ form.as_table }}
+	</table>
+	<div style="margin-left: auto; margin-right: auto;text-align:center;"><input type="submit" value="Submit"></div>
+    </form>
+{% endblock %}

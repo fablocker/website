@@ -1,0 +1,1 @@
+You must activate your account within {{ expiration_days }} days by browsing here: http://{{ site.domain }}/accounts/activate/{{ activation_key }}

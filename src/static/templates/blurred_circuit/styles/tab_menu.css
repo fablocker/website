@@ -1,0 +1,50 @@
+/* TAB MENU   
+----------------------------------------------------------*/
+#menucontainer
+{
+	position: relative;
+	margin-top: 2px;
+	margin-right: 300px;;
+	margin-left: auto;
+	top: 0px;
+}
+ul#menu
+{
+    margin: 0;
+	float: right;
+}
+
+ul#menu li
+{
+	-moz-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li a
+{
+	-moz-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	border-style: solid;
+	border-width: 2px 2px 0px 2px;
+	border-color: #000;
+	padding: 5px 10px;
+    text-decoration: none;
+    line-height: 2em;
+    color: #FFFFFF;
+	background-color: #464646;
+}
+
+ul#menu li a:hover
+{
+    background-color: #bfbfbf;
+    text-decoration: none;
+}
+
+
+ul#menu li.active-menu-item a
+{
+    background-color: #cfcfcf;
+    color: #000;
+}

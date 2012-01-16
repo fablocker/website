@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load simplesocial %}
+{% block title %}{{ poll.question }}{% endblock %}
+
+
+{% block content %}
+{% if request.path != '/' %}<h1>{{ poll.question }}</h1>{% endif %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% if user.is_authenticated %}
+    <p>You will vote as {{ user.username }}. You can only vote once, and cannot change your vote.</p>
+    <form action=" {{ poll.url }}" method="post">
+	{% csrf_token %}
+	{% for choice in poll.choice_set.all %}
+	    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+	    <label for="choice{{ forloop.counter }}">{{ choice.choice }} <br/> (votes: {{ choice.votes }})</label><br />
+	{% endfor %}
+	<input type="submit" value="Vote" />
+	</form>
+	<p>Total Voters: {{ poll.voters|length }}</p>
+
+	
+{% else %}
+    <p>You must be logged in to vote.</p>
+{% endif %}
+
+
+{% endblock %}

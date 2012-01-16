@@ -1,0 +1,109 @@
+html, body
+{
+  height: 100%;
+}
+
+body
+{
+    color: #444444;
+	background-image: url('../images/circuitboard_blue_blur.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment:fixed;
+}
+
+a
+{
+	color: #000000;
+}
+
+.content, .sidebar-block
+{
+	background-color: #fff;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 20px;
+}
+
+.twtr-widget
+{
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+
+.errorlist
+{
+	color: #E11414;
+}
+
+.helptext
+{
+	color: #b4b4b4;
+}
+
+.recent_pages li
+{
+    list-style: none;
+}
+
+.user
+{
+	text-align: right;
+}
+
+#id_url, #id_title, #id_content
+{
+	width: 450px;
+}
+
+#wrapper
+{
+	width: 80%;
+	height: 100%;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+
+#header
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+    background-image: url('../images/fablocker_logo.png');
+	background-repeat: no-repeat;
+	min-width: 500px;
+	min-height: 100px;
+	height:auto;
+	width: auto;
+}
+
+#content
+{
+	/* this height hack is weird, but makes the min-height work */
+	min-height: 500px;
+	height: auto;
+}
+
+#sidebar
+{
+	margin-right: 25px;
+	margin-left: 5px;
+}
+
+#footer
+{
+	position: relative;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-weight: 800;
+}
+
+
