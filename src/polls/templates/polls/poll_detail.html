@@ -9,16 +9,17 @@
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 {% if user.is_authenticated %}
-    <p>You will vote as {{ user.username }}. You can only vote once, and cannot change your vote.</p>
+    {% if not already_voted %}<p>You will vote as "{{ user.email }}". You can only vote once, and cannot change your vote.</p>{% endif %}
     <form action=" {{ poll.url }}" method="post">
 	{% csrf_token %}
 	{% for choice in poll.choice_set.all %}
-	    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+	    {% if not already_voted %}<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />{% endif %}
 	    <label for="choice{{ forloop.counter }}">{{ choice.choice }} <br/> (votes: {{ choice.votes }})</label><br />
 	{% endfor %}
-	<input type="submit" value="Vote" />
+	{% if not already_voted %}<input type="submit" value="Vote" />{% endif %}
 	</form>
 	<p>Total Voters: {{ poll.voters|length }}</p>
+
 
 	
 {% else %}
