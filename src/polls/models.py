@@ -8,7 +8,7 @@ class Poll(models.Model):
     url = models.CharField('URL', max_length=256)
     question = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', default=datetime.now())
-    voters = fields.ListField(models.ForeignKey(User), editable=False)
+    voters = fields.ListField(models.TextField(blank=True), editable=False)
     
     def __unicode__(self):
         return self.question
