@@ -1,9 +1,9 @@
 from .models import Event
-from .views import vote
+from .views import rsvp
 from urlrouter.base import URLHandler
 
 
-class RsvtRoutes(URLHandler):
+class RsvpRoutes(URLHandler):
     model = Event
 
     def show(self, request, event):

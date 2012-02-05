@@ -24,12 +24,16 @@
 {% autoescape off %}
 {{ event.content }}
 {% endautoescape %}
-
-<form action=" {{ poll.url }}" method="post">
+<br/>
+<br/>
+<h3>Interested in attending this event? RSVP here w/your e-mail address!</h3>
+<br/>
+<form action=" {{ event.url }}" method="post">
 	{% csrf_token %}
-	{{ form }}
-	<input type="submit" value="Vote" />
-	</form>
+	{{ form.as_p }}
+	<input type="submit" value="RSVP" />
+</form>
+<br/>
 
 {% if event.show_share_buttons %}
 {% with event.title|add:' | '|add:site_name as title %}
