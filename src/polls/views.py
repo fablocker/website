@@ -40,13 +40,3 @@ def vote(request, poll):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         #return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))
-'''         
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            topic = form.cleaned_data['topic']
-            message = form.cleaned_data['message']
-            sender = form.cleaned_data['sender']
-    else:
-        form = ContactForm()'''
-          
