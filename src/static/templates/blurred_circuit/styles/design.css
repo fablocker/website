@@ -85,6 +85,7 @@ a
 
 #content
 {
+	max-width: 600px;
 	/* this height hack is weird, but makes the min-height work */
 	min-height: 500px;
 	height: auto;
