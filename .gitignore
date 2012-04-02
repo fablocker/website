@@ -2,3 +2,4 @@
 
 *.py~
 src/.gaedata/datastore
+*.private.py
