@@ -28,9 +28,13 @@
 <br/>
 <h3>Interested in attending this event? RSVP here w/your e-mail address!</h3>
 <br/>
+
 <form action=" {{ event.url }}" method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
+	{% if saved %}
+	<p><strong>Thanks, your e-mail has been saved for this event</strong></p>
+	{% endif %}
 	<input type="submit" value="RSVP" />
 </form>
 <br/>
