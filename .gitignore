@@ -1,2 +1,4 @@
 *.pyc
+
 *.py~
+src/.gaedata/datastore
