@@ -23,7 +23,9 @@
 
 	
 {% else %}
-    <p>You must be logged in to vote.</p>
+    {% for choice in poll.choice_set.all %}
+	    <span class="poll_choice" id="choice{{ forloop.counter }}">{{ choice.choice }} (votes: {{ choice.votes }})</span><br />
+	{% endfor %}
 {% endif %}
 
 
